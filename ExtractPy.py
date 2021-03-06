@@ -16,6 +16,13 @@ class UserInterface(QMainWindow):
 		super(UserInterface, self).__init__()
 		uic.loadUi('.\\UI\\MainWindowUI.ui', self)
 		self.show()
+		self.connectUI()
+
+	def connectUI(self):
+		''' Connect UI elements pythonically '''
+		self.btn_Extract.clicked.connect(lambda: print('Extract Clicked'))
+		self.btn_Clear.clicked.connect(lambda: print('Clears the file list'))
+		self.btn_Settings.clicked.connect(lambda: print('Opens the settings menu'))
 
 
 # Run program
